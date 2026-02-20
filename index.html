@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PROJECT CYBERWAIS</title>
   <style>
-    /* 1. GLOBAL & BACKGROUND */
+    
     body {
       margin: 0;
       display: flex;
@@ -14,10 +14,10 @@
       min-height: 100vh;
       font-family: Arial, sans-serif;
       background: linear-gradient(135deg, #333383 0%, #b9b9e9 100%);
-      background-attachment: fixed; /* Keeps gradient stable during scroll */
+      background-attachment: fixed; 
     }
 
-    /* 2. HEADER NAVIGATION */
+    
     .site-header {
       position: fixed;
       top: 20px;
@@ -90,7 +90,7 @@
       transition: transform 0.5s ease, background-color 0.5s, box-shadow 0.5s;
       transform: translateY( 2px);
     }
-    /* 3. MAIN CONTENT CARD */
+   
     .main-container {
       background-color: white;
       padding: 50px;
@@ -111,7 +111,7 @@
       -webkit-text-fill-color: transparent;
     }
 
-    /* 4. OPTIMIZED .ss BUTTON */
+   
     .ss {
       background-color: white;
       border: 1px solid rgb(103, 103, 236);
@@ -206,6 +206,11 @@
     .rrr {
       font-size: 24px;
     }
+
+    .nav-links li a:active, .ss:active {
+    transform: scale(0.95); 
+    background-color: rgb(83, 83, 216);
+    transition: 0.1s; 
   }
 
 
@@ -253,3 +258,4 @@
 </body>
 
 </html>
+
