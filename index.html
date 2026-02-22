@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PROJECT CYBERWAIS</title>
   <style>
-    
+ 
     body {
       margin: 0;
       display: flex;
@@ -14,10 +14,10 @@
       min-height: 100vh;
       font-family: Arial, sans-serif;
       background: linear-gradient(135deg, #333383 0%, #b9b9e9 100%);
-      background-attachment: fixed; 
+      background-attachment: fixed;
     }
 
-    
+ 
     .site-header {
       position: fixed;
       top: 20px;
@@ -40,14 +40,6 @@
       margin-left: 20px;
     }
 
-    .logo-img-container {
-      height: 100px;
-      width: auto;
-      margin-left: 2px;
-      
-
-    }
-
     .logoname {
       font-size: 24px;
       font-weight: 900;
@@ -64,8 +56,6 @@
       margin-right: 30px;
       padding: 0;
       font: bold 13px Arial, sans-serif;
-      transform: none;
-      
     }
 
     .nav-links li a {
@@ -75,8 +65,7 @@
       background-color: #d6eefc;
       border-radius: 20px;
       color: #333;
-      transition: transform 0.5s ease, background-color 0.5s, box-shadow 0.5s;
-     
+      transition: transform 0.3s ease, background-color 0.3s, box-shadow 0.3s;
     }
 
     .nav-links li a:hover {
@@ -85,20 +74,28 @@
       transform: translateY(-5px);
     }
 
-  
     .nav-links li a:active {
-      transition: transform 0.5s ease, background-color 0.5s, box-shadow 0.5s;
-      transform: translateY( 2px);
+      transform: translateY(2px);
     }
-   
+
+    
     .main-container {
-      background-color: white;
+      background: white;
       padding: 50px;
       border-radius: 25px;
       box-shadow: 20px 25px 35px rgba(0, 0, 0, 0.15);
       text-align: center;
       border: 2px solid #000;
       width: 320px;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .logo-img-container {
+      height: 100px;
+      width: auto;
+      margin-bottom: 10px;
+      transition: transform 0.3s ease;
+      display: inline-block;
     }
 
     .rrr {
@@ -109,9 +106,25 @@
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
+      border-inline: #000 solid 2px;
+      transition: text-shadow 0.3s ease;
     }
 
-   
+    
+    .main-container:hover {
+      box-shadow: 20px 25px 35px rgba(0, 0, 0, 0.3);
+      transform: translateY(-5px);
+    }
+
+    .main-container:hover .rrr {
+      text-shadow: 1px 1px 0px #333383;
+    }
+
+    .main-container:hover .logo-img-container {
+      transform: scale(1.1);
+    }
+
+  
     .ss {
       background-color: white;
       border: 1px solid rgb(103, 103, 236);
@@ -123,7 +136,6 @@
       font-weight: bold;
       border-radius: 25px;
       box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-      /* Combined transitions for efficiency */
       transition: transform 0.3s ease, background-color 0.3s, color 0.3s, box-shadow 0.3s;
     }
 
@@ -135,8 +147,7 @@
     }
 
     .ss:active {
-      transform: translateY(-2px);
-      transform: translateY( 2px);
+      transform: translateY(2px);
     }
 
     .link-text {
@@ -145,7 +156,7 @@
       color: #666;
       text-decoration: none;
       font-size: 13px;
-      transition: 0.2s;
+      transition: color 0.2s;
     }
 
     .link-text:hover {
@@ -153,75 +164,66 @@
       text-decoration: underline;
     }
 
-  
-
-    /* THE MOBILE ADAPTATION */
-  @media (max-width: 768px) {
     
-    .site-header {
-      width: 94%;
-      left: 3%;
-      height: auto;
-      padding: 10px 0;
-      flex-direction: column; 
-      border-radius: 20px;
-      margin-top: 5px;
+    @media (max-width: 768px) {
+      .site-header {
+        width: 94%;
+        left: 3%;
+        height: auto;
+        padding: 10px 0;
+        flex-direction: column;
+        border-radius: 20px;
+        margin-top: 5px;
+      }
+
+      .logoname {
+        margin: 0 0 10px 0;
+        font-size: 18px;
+      }
+
+      .logo-img {
+        height: 50px;
+        margin: 0;
+      }
+
+      .nav-links {
+        margin-right: 0;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .nav-links li a {
+        padding: 5px 10px;
+        font-size: 11px;
+      }
+
+      .main-container {
+        width: 80%;
+        padding: 30px 20px;
+        margin-top: 140px;
+      }
+
+      .rrr {
+        font-size: 24px;
+      }
+
+      /* Touch Feedback (Mobile Only) */
+      .nav-links li a:hover, .ss:hover {
+        transform: none;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .nav-links li a:active, .ss:active {
+        transform: scale(0.95);
+        background-color: rgb(83, 83, 216);
+        transition: 0.1s;
+      }
     }
-
-    .logoname {
-      margin-left: 0;
-      font-size: 18px;
-      margin-bottom: 10px;
-    }
-
-    .logo-img {
-      height: 50px;
-      margin: 0 auto;
-
-    }
-
-    .logo-img-container {
-      height: 50px;
-    }
-
-    .nav-links {
-      margin-right: 0;
-      gap: 10px;
-      flex-wrap: wrap; 
-      justify-content: center;
-    }
-
-    .nav-links li a {
-      padding: 5px 10px;
-      font-size: 11px;
-    }
-
-   
-    .main-container {
-      width: 65%; 
-      padding: 30px 20px;
-      margin-top: 140px; /* Space for the stacked header */
-    }
-
-    .rrr {
-      font-size: 24px;
-    }
-
-    .nav-links li a:active, .ss:active {
-    transform: scale(0.95); 
-    background-color: rgb(83, 83, 216);
-    transition: 0.1s; 
-  }
-
-
-
-    
   </style>
 </head>
 
 <body>
-
-
 
   <header class="site-header">
     <div class="logo">
@@ -252,10 +254,8 @@
   </div>
 
   <footer style="position: fixed; bottom: 10px; width: 100%; text-align: center;">
- 
-    <a class="g">Made with ❤️ by CYBERWAIS LEh jet</a>
- 
+    <span style="font-size: 12px; color: #333;">Made by CYBERWAIS LEh jet</span>
+  </footer>
+
 </body>
-
 </html>
-
