@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PROJECT CYBERWAIS</title>
+  
   <style>
- 
+
+    
     body {
       margin: 0;
       display: flex;
@@ -15,14 +19,24 @@
       font-family: Arial, sans-serif;
       background: linear-gradient(135deg, #333383 0%, #b9b9e9 100%);
       background-attachment: fixed;
+      flex-direction: column;
+      width: 100%;
+      overflow-x: hidden;
+     
     }
 
- 
+    html {
+      scroll-behavior: smooth;
+      
+    }
+
+
     .site-header {
       position: fixed;
       top: 20px;
       left: 1%;
-      width: 98%;
+      right: 1%;
+      width: auto;
       height: 60px;
       display: flex;
       justify-content: space-between;
@@ -32,6 +46,7 @@
       border-radius: 100px;
       box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
       z-index: 1000;
+      
     }
 
     .logo-img {
@@ -78,7 +93,7 @@
       transform: translateY(2px);
     }
 
-    
+
     .main-container {
       background: white;
       padding: 50px;
@@ -88,7 +103,38 @@
       border: 2px solid #000;
       width: 320px;
       transition: box-shadow 0.3s ease, transform 0.3s ease;
+      margin-top: 110px;
+      
+    
     }
+
+    .main-container2 {
+      background: white;
+      padding: 50px;
+      border-radius: 25px;
+      box-shadow: 20px 25px 35px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      border: 2px solid #000;
+      width: 320px;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+      margin-top: 200px;
+    }
+
+    .main-container3 {
+      background: white;
+      padding: 50px;
+      border-radius: 25px;
+      box-shadow: 20px 25px 35px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      border: 2px solid #000;
+      width: 320px;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+      margin-top: 200px;
+    }
+
+
+
+
 
     .logo-img-container {
       height: 100px;
@@ -110,7 +156,7 @@
       transition: text-shadow 0.3s ease;
     }
 
-    
+
     .main-container:hover {
       box-shadow: 20px 25px 35px rgba(0, 0, 0, 0.3);
       transform: translateY(-5px);
@@ -124,7 +170,7 @@
       transform: scale(1.1);
     }
 
-  
+
     .ss {
       background-color: white;
       border: 1px solid rgb(103, 103, 236);
@@ -164,7 +210,7 @@
       text-decoration: underline;
     }
 
-    
+
     @media (max-width: 768px) {
       .site-header {
         width: 94%;
@@ -209,12 +255,14 @@
       }
 
       /* Touch Feedback (Mobile Only) */
-      .nav-links li a:hover, .ss:hover {
+      .nav-links li a:hover,
+      .ss:hover {
         transform: none;
         box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
       }
 
-      .nav-links li a:active, .ss:active {
+      .nav-links li a:active,
+      .ss:active {
         transform: scale(0.95);
         background-color: rgb(83, 83, 216);
         transition: 0.1s;
@@ -232,30 +280,51 @@
     <div class="logoname">CYBERWAIS</div>
     <nav>
       <ul class="nav-links">
-        <li><a href="#">HOME</a></li>
-        <li><a href="#">CAMPAIGN</a></li>
-        <li><a href="#">VISION</a></li>
-        <li><a href="#">MISSION</a></li>
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#campaign">CAMPAIGN</a></li>
+        <li><a href="#vision">VISION</a></li>
+        <li><a href="#mission">MISSION</a></li>
       </ul>
     </nav>
   </header>
 
-  <div class="main-container">
-    <a href="#"><img src="logo.png" alt="CYBERWAIS LOGO" class="logo-img-container"></a>
-    <div class="rrr">PROJECT CYBERWAIS</div>
-    
-    <button class="ss" onclick="window.open('MainUI.html', '_self')">EXPLORE</button>
-    
-    <div style="margin-top: 20px;">
-      <a target="_blank" href="https://pin.it/3YZmen0xa" class="link-text">CONTACT US</a>
-      <span style="color: #ccc; margin: 0 10px;">|</span>
-      <a target="_blank" href="#" class="link-text">RESOURCES</a>
+  <section id="home">
+    <div class="main-container">
+      <a href="#"><img src="logo.png" alt="CYBERWAIS LOGO" class="logo-img-container"></a>
+      <div class="rrr">PROJECT CYBERWAIS</div>
+      <button class="ss" onclick="document.getElementById('campaign').scrollIntoView();">EXPLORE</button>
+      <div style="margin-top: 20px;">
+        <a target="_blank" href="https://google.com" style="color:#666; text-decoration:none; font-size:13px;">CONTACT
+          US</a>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <footer style="position: fixed; bottom: 10px; width: 100%; text-align: center;">
+  <section id="campaign">
+    <div class="main-container2">
+      <div class="rrr">CAMPAIGN</div>
+      <p>Cyber awareness strategies and active defense logs go here.</p>
+    </div>
+  </section>
+
+  <section id="vision">
+    <div class="main-container3">
+      <div class="rrr">VISION</div>
+      <p>A secure digital landscape for every user.</p>
+    </div>
+  </section>
+
+  <section id="mission">
+    <div class="main-container">
+      <div class="rrr">MISSION</div>
+      <p>Educating and empowering users against online threats.</p>
+    </div>
+  </section>
+
+  <footer style="padding: 20px; text-align: center; width: 100%;">
     <span style="font-size: 12px; color: #333;">Made by CYBERWAIS LEh jet</span>
   </footer>
 
 </body>
+
 </html>
