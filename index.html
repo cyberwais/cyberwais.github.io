@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,11 +23,22 @@
       flex-direction: column;
       width: 100%;
       overflow-x: hidden;
-     
+     background: linear-gradient(135deg, #333383 0%, #b9b9e9 100%);
+  background-attachment: fixed;
+
+ 
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px), 
+    linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px), 
+    linear-gradient(135deg, #333383 0%, #b9b9e9 100%); 
+  
+  
+  background-size: 30px 30px, 30px 30px, 100% 100%;
     }
 
     html {
       scroll-behavior: smooth;
+    
       
     }
 
@@ -71,6 +83,8 @@
       margin-right: 30px;
       padding: 0;
       font: bold 13px Arial, sans-serif;
+      font-size: large;
+      
     }
 
     .nav-links li a {
@@ -118,6 +132,8 @@
       width: 320px;
       transition: box-shadow 0.3s ease, transform 0.3s ease;
       margin-top: 250px;
+      
+      
     }
 
     .main-container3 {
@@ -142,6 +158,7 @@
       width: 320px;
       transition: box-shadow 0.3s ease, transform 0.3s ease;
       margin-top: 250px;
+      margin-bottom: 200px;
     }
 
 
@@ -166,6 +183,7 @@
       -webkit-text-fill-color: transparent;
       border-inline: #000 solid 2px;
       transition: text-shadow 0.3s ease;
+      
     }
 
 
@@ -293,9 +311,15 @@
     <nav>
       <ul class="nav-links">
         <li><a href="#home">HOME</a></li>
-        <li><a href="#campaign">CAMPAIGN</a></li>
+        <li><a href="#about">ABOUT</a></li>
         <li><a href="#vision">VISION</a></li>
         <li><a href="#mission">MISSION</a></li>
+        <li><a href="#more">●●●</a>
+     
+      
+       
+            
+
       </ul>
     </nav>
   </header>
@@ -304,7 +328,7 @@
     <div class="main-container">
       <a href="#"><img src="logo.png" alt="CYBERWAIS LOGO" class="logo-img-container"></a>
       <div class="rrr">PROJECT CYBERWAIS</div>
-      <button class="ss" onclick="document.getElementById('campaign').scrollIntoView();">EXPLORE</button>
+      <button class="ss" onclick="document.getElementById('about').scrollIntoView();">EXPLORE</button>
       <div style="margin-top: 20px;">
         <a target="_blank" href="https://i.pinimg.com/736x/06/d6/7c/06d67c2573c628b81b915bddc1f55d91.jpg" style="color:#666; text-decoration:none; font-size:13px;">CONTACT
           US</a>
@@ -312,10 +336,17 @@
     </div>
   </section>
 
-  <section id="campaign">
+  <section id="about">
     <div class="main-container2">
-      <div class="rrr">CAMPAIGN</div>
-      <p>Solid tong website nato legit promise</p>
+      <div class="rrr">ABOUT </div>
+      <p> Why settle for just being smart when you can be wiser & safer at the same time?
+         A high KDA won't save you if your password is "12345678".
+          Cybersecurity isn't just for tech geniuses it's also for those who are aware  of how,where,
+          when & why we need to be careful at sudden random links in your DMS. 
+So join us!
+ Cyberwais is a campaign for protection,awareness & responsibility. We'll help you be much safer & much secured. It’s like having a map hack, but legal. You see the phishing scams before they even land onto your area. Don’t leave your objective "open." Guard your privacy, contest the scammers, and secure the win for your digital life.
+      </p>
+      <button class="ss" onclick="document.getElementById('vision').scrollIntoView();">continue</button>
     </div>
   </section>
 
@@ -323,6 +354,7 @@
     <div class="main-container3">
       <div class="rrr">VISION</div>
       <p>i see dead people</p>
+      <button class="ss" onclick="document.getElementById('mission').scrollIntoView();">continue</button>
     </div>
   </section>
 
@@ -334,11 +366,9 @@
   </section>
 
   <footer style="padding: 20px; text-align: center; width: 100%;">
-    <span style="font-size: 12px; color: #333;">Made by CYBERWAIS LEh jet - fernando/span>
+    <span style="font-size: 12px; color: #333;">Made by CYBERWAIS LEh jet - fernando </span>
   </footer>
 
 </body>
 
 </html>
-
-/* may bitaw : TRESTIZA */
