@@ -14,17 +14,17 @@
     body {
       margin: 0;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
       min-height: 100vh;
       font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #333383 0%, #b9b9e9 100%);
-      background-attachment: fixed;
-      flex-direction: column;
-      width: 100%;
+      background: linear-gradient(135deg, #333383 0%, #b9b9e9 100%) fixed;
+      background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px), 
+        linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px), 
+        linear-gradient(135deg, #333383 0%, #b9b9e9 100%); 
+      background-size: 30px 30px, 30px 30px, 100% 100%;
       overflow-x: hidden;
-     background: linear-gradient(135deg, #333383 0%, #b9b9e9 100%);
-  background-attachment: fixed;
 
  
   background-image: 
@@ -45,30 +45,29 @@
 
     .site-header {
       position: fixed;
-      top: 20px;
-      left: 1%;
-      right: 1%;
-      width: auto;
-      height: 60px;
+      top: 15px;
+      width: 96%;
+      max-width: 1200px;
+      min-height: 60px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background-color: #aeaef1;
-      opacity: 0.95;
-      border-radius: 100px;
+      background-color: rgba(174, 174, 241, 0.95);
+      border-radius: 50px;
       box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
       z-index: 1000;
+      padding: 5px 20px;
       
     }
 
     .logo-img {
       height: 50px;
       width: auto;
-      margin-left: 20px;
+      
     }
 
     .logoname {
-      font-size: 24px;
+      font-size: clamp(16px, 4vw, 24px); 
       font-weight: 900;
       color: #333;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -79,11 +78,12 @@
     .nav-links {
       display: flex;
       list-style: none;
-      gap: 15px;
+      gap: 10px;
       margin-right: 30px;
       padding: 0;
       font: bold 13px Arial, sans-serif;
       font-size: large;
+      margin: 0;
       
     }
 
@@ -132,6 +132,7 @@
       width: 320px;
       transition: box-shadow 0.3s ease, transform 0.3s ease;
       margin-top: 250px;
+      
       
       
     }
@@ -241,61 +242,23 @@
     }
 
 
-    @media (max-width: 768px) {
+     @media (max-width: 768px) {
       .site-header {
-        width: 94%;
-        left: 3%;
-        height: auto;
-        padding: 10px 0;
         flex-direction: column;
-        border-radius: 20px;
-        margin-top: 5px;
+        height: auto;
+        padding: 10px;
+        top: 10px;
       }
-
-      .logoname {
-        margin: 0 0 10px 0;
-        font-size: 18px;
-      }
-
-      .logo-img {
-        height: 50px;
-        margin: 0;
-      }
-
       .nav-links {
-        margin-right: 0;
-        gap: 10px;
-        flex-wrap: wrap;
-        justify-content: center;
+        gap: 8px;
+        margin-top: 10px;
       }
-
       .nav-links li a {
+        font-size: 10px;
         padding: 5px 10px;
-        font-size: 11px;
       }
-
-      .main-container {
-        width: 80%;
-        padding: 30px 20px;
-        margin-top: 140px;
-      }
-
-      .rrr {
-        font-size: 24px;
-      }
-
-      /* Touch Feedback (Mobile Only) */
-      .nav-links li a:hover,
-      .ss:hover {
-        transform: none;
-        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-      }
-
-      .nav-links li a:active,
-      .ss:active {
-        transform: scale(0.95);
-        background-color: rgb(83, 83, 216);
-        transition: 0.1s;
+      .card {
+        width: 85%;
       }
     }
   </style>
@@ -312,8 +275,8 @@
       <ul class="nav-links">
         <li><a href="#home">HOME</a></li>
         <li><a href="#about">ABOUT</a></li>
-        <li><a href="#vision">VISION</a></li>
-        <li><a href="#mission">MISSION</a></li>
+        <li><a href="#vision">WHAT'S NEW</a></li>
+        <li><a href="#mission">MISSION & VISION</a></li>
         <li><a href="#more">●●●</a>
      
       
@@ -339,20 +302,14 @@
   <section id="about">
     <div class="main-container2">
       <div class="rrr">ABOUT </div>
-      <p> Why settle for just being smart when you can be wiser & safer at the same time?
-         A high KDA won't save you if your password is "12345678".
-          Cybersecurity isn't just for tech geniuses it's also for those who are aware  of how,where,
-          when & why we need to be careful at sudden random links in your DMS. 
-So join us!
- Cyberwais is a campaign for protection,awareness & responsibility. We'll help you be much safer & much secured. It’s like having a map hack, but legal. You see the phishing scams before they even land onto your area. Don’t leave your objective "open." Guard your privacy, contest the scammers, and secure the win for your digital life.
-      </p>
+      <p> CYBERWAIS IS A CAMPAIGN FOR PROTECTION, AWARENESS, AND RESPONSIBILITY IN THE DIGITAL WORLD. </p>
       <button class="ss" onclick="document.getElementById('vision').scrollIntoView();">continue</button>
     </div>
   </section>
 
   <section id="vision">
     <div class="main-container3">
-      <div class="rrr">VISION</div>
+      <div class="rrr">WHAT'S NEW</div>
       <p>i see dead people</p>
       <button class="ss" onclick="document.getElementById('mission').scrollIntoView();">continue</button>
     </div>
@@ -371,6 +328,8 @@ So join us!
 
 </body>
 
+
+
 </html>
 
-hawak ko ang beat, hawak ko ang gabi
+Hawak ko ang beat Hawak ko ang gabi
