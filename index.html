@@ -1,16 +1,20 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PROJECT CYBERWAIS</title>
   
   <style>
-
     
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       display: flex;
@@ -18,32 +22,16 @@
       align-items: center;
       min-height: 100vh;
       font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #333383 0%, #b9b9e9 100%) fixed;
       background-image: 
         linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px), 
         linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px), 
         linear-gradient(135deg, #333383 0%, #b9b9e9 100%); 
       background-size: 30px 30px, 30px 30px, 100% 100%;
       overflow-x: hidden;
-
- 
-  background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px), 
-    linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px), 
-    linear-gradient(135deg, #333383 0%, #b9b9e9 100%); 
-  
-  
-  background-size: 30px 30px, 30px 30px, 100% 100%;
     }
 
-    html {
-      scroll-behavior: smooth;
     
-      
-    }
-
-
-    .site-header {
+    .navbar {
       position: fixed;
       top: 15px;
       width: 96%;
@@ -57,16 +45,14 @@
       box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
       z-index: 1000;
       padding: 5px 20px;
-      
     }
 
-    .logo-img {
+    .navbar__logo-img {
       height: 50px;
       width: auto;
-      
     }
 
-    .logoname {
+    .navbar__brand {
       font-size: clamp(16px, 4vw, 24px); 
       font-weight: 900;
       color: #333;
@@ -75,106 +61,132 @@
       margin-left: 20px;
     }
 
-    .nav-links {
+    .navbar__list {
       display: flex;
       list-style: none;
       gap: 10px;
-      margin-right: 30px;
-      padding: 0;
-      font: bold 13px Arial, sans-serif;
-      font-size: large;
       margin: 0;
-      
+      padding: 0;
     }
 
-    .nav-links li a {
+    .navbar__link {
       display: inline-block;
       text-decoration: none;
       padding: 8px 15px;
       background-color: #d6eefc;
       border-radius: 20px;
       color: #333;
-      transition: transform 0.3s ease, background-color 0.3s, box-shadow 0.3s;
+      font-weight: bold;
+      font-size: 14px;
+      transition: all 0.3s ease;
     }
 
-    .nav-links li a:hover {
+    .navbar__link:hover {
       background-color: rgb(103, 103, 236);
       color: white;
+      transform: translateY(-3px);
+    }
+    
+    .navbar__link:active {
+      transform: translateY(0px);
+    }
+
+    
+    .section-wrapper {
+      padding: 100px 20px; 
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+   
+    .card {
+      background: white;
+      padding: 50px;
+      border-radius: 25px;
+      box-shadow: 20px 25px 35px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      border: 2px solid #000;
+      width: 100%;
+      max-width: 400px;
+      transition: all 0.3s ease;
+    }
+
+    #about .card {
+  display: flex;
+  flex-direction: row-reverse; 
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  text-align: left;
+  max-width: 900px; 
+  padding: 40px;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  color: #333383;
+  font-size: 20px;
+  margin-top: 20px;
+  letter-spacing: 1px;
+}
+
+.about-text hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, #333383, transparent);
+  margin: 15px 0;
+}
+
+.about-img {
+  width: 300px; /* Larger image */
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 10px 10px 20px rgba(0,0,0,0.1);
+  transition: transform 0.5s ease;
+}
+
+#about .card:hover .about-img {
+  transform: rotate(3deg) scale(1.05); 
+}
+
+
+@media (max-width: 768px) {
+  #about .card {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 30px;
+  }
+  
+  .about-img {
+    width: 200px;
+  }
+
+  .about-text hr {
+    background: linear-gradient(90deg, transparent, #333383, transparent);
+  }
+}
+    
+    .card:hover {
+      box-shadow: 20px 25px 35px rgba(0, 0, 0, 0.3);
       transform: translateY(-5px);
     }
 
-    .nav-links li a:active {
-      transform: translateY(2px);
-    }
-
-
-    .main-container {
-      background: white;
-      padding: 50px;
-      border-radius: 25px;
-      box-shadow: 20px 25px 35px rgba(0, 0, 0, 0.15);
-      text-align: center;
-      border: 2px solid #000;
-      width: 320px;
-      transition: box-shadow 0.3s ease, transform 0.3s ease;
-      margin-top: 110px;
-      
-    
-    }
-
-    .main-container2 {
-      background: white;
-      padding: 50px;
-      border-radius: 25px;
-      box-shadow: 20px 25px 35px rgba(0, 0, 0, 0.15);
-      text-align: center;
-      border: 2px solid #000;
-      width: 320px;
-      transition: box-shadow 0.3s ease, transform 0.3s ease;
-      margin-top: 250px;
-      
-      
-      
-    }
-
-    .main-container3 {
-      background: white;
-      padding: 50px;
-      border-radius: 25px;
-      box-shadow: 20px 25px 35px rgba(0, 0, 0, 0.15);
-      text-align: center;
-      border: 2px solid #000;
-      width: 320px;
-      transition: box-shadow 0.3s ease, transform 0.3s ease;
-      margin-top: 250px;
-    }
-
-      .main-container4 {
-      background: white;
-      padding: 50px;
-      border-radius: 25px;
-      box-shadow: 20px 25px 35px rgba(0, 0, 0, 0.15);
-      text-align: center;
-      border: 2px solid #000;
-      width: 320px;
-      transition: box-shadow 0.3s ease, transform 0.3s ease;
-      margin-top: 250px;
-      margin-bottom: 200px;
-    }
-
-
-
-
-
-    .logo-img-container {
+    .card__logo {
       height: 100px;
       width: auto;
       margin-bottom: 10px;
       transition: transform 0.3s ease;
-      display: inline-block;
     }
 
-    .rrr {
+    .card:hover .card__logo {
+      transform: scale(1.1);
+    }
+
+    .card__title {
       font-weight: 1000;
       font-size: 32px;
       margin-bottom: 25px;
@@ -182,154 +194,462 @@
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
-      border-inline: #000 solid 2px;
       transition: text-shadow 0.3s ease;
-      
     }
 
-
-    .main-container:hover {
-      box-shadow: 20px 25px 35px rgba(0, 0, 0, 0.3);
-      transform: translateY(-5px);
-    }
-
-    .main-container:hover .rrr {
+    .card:hover .card__title {
       text-shadow: 1px 1px 0px #333383;
     }
 
-    .main-container:hover .logo-img-container {
-      transform: scale(1.1);
-    }
-
-
-    .ss {
+    /* --- COMPONENT: BUTTONS --- */
+    .btn-primary {
       background-color: white;
       border: 1px solid rgb(103, 103, 236);
-      height: 42px;
-      width: 110px;
+      height: 45px;
+      padding: 0 25px;
       color: rgb(103, 103, 236);
       cursor: pointer;
       font-size: 16px;
       font-weight: bold;
       border-radius: 25px;
       box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s ease, background-color 0.3s, color 0.3s, box-shadow 0.3s;
+      transition: all 0.3s ease;
     }
 
-    .ss:hover {
+    .btn-primary:hover {
       background-color: rgb(103, 103, 236);
       color: white;
-      transform: translateY(-6px);
-      box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.3);
+      transform: translateY(-4px);
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
     }
 
-    .ss:active {
-      transform: translateY(2px);
+    .btn-primary:active {
+      transform: translateY(0px);
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
     }
 
-    .link-text {
+    .footer-text {
       display: inline-block;
       margin-top: 20px;
       color: #666;
       text-decoration: none;
       font-size: 13px;
-      transition: color 0.2s;
     }
 
-    .link-text:hover {
-      color: rgb(103, 103, 236);
-      text-decoration: underline;
-    }
+    .slider-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .slider-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding: 10px 0;
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+  }
+
+  .slider-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .member-card {
+    min-width: 100%; 
+    scroll-snap-align: center;
+    text-align: center;
+  }
+
+  .member-photo {
+    width: 80px;
+    height: 80px;
+    background-color: #d6eefc;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    border: 2px solid #333383;
+  }
+
+  .member-name {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+  }
+
+  .member-role {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+  }
+
+  /* --- BUTTONS --- */
+  .slider-btn {
+    background: rgba(103, 103, 236, 0.2);
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background 0.3s;
+    z-index: 10;
+  }
+
+  .slider-btn:hover {
+    background: rgba(103, 103, 236, 0.5);
+    color: white;
+  }
+
+  .docs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.doc-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  border: 1px solid #ddd;
+  background: #f9f9f9;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.doc-item img {
+  width: 100%;
+  height: 210px; 
+  object-fit: contain; 
+  background-color: #f0f0f0; 
+  display: block;
+}
+
+.doc-caption {
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333383;
+  background: white;
+}
+
+.doc-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+#documents .card {
+  max-width: 900px;
+}
 
 
-     @media (max-width: 768px) {
-      .site-header {
-        flex-direction: column;
-        height: auto;
-        padding: 10px;
-        top: 10px;
-      }
-      .nav-links {
-        gap: 8px;
-        margin-top: 10px;
-      }
-      .nav-links li a {
-        font-size: 10px;
-        padding: 5px 10px;
-      }
-      .card {
-        width: 85%;
-      }
-    }
+
+.mission-vision-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: left;
+  width: 100%;
+}
+
+.mv-item {
+  padding: 20px;
+  border-left: 5px solid #333383; 
+  background: rgba(214, 238, 252, 0.3); 
+  border-radius: 0 15px 15px 0;
+  transition: transform 0.3s ease;
+}
+
+.mv-item:hover {
+  transform: translateX(10px);
+  background: rgba(214, 238, 252, 0.5);
+}
+
+.mv-tag {
+  font-weight: 900;
+  font-size: 14px;
+  color: #333383;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.mv-content {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+}
+
+
+.mv-item.mission {
+  border-left-color: #b9b9e9;
+}
+
   </style>
+
+  <script>
+  function moveSlider(direction) {
+    const slider = document.getElementById('memberSlider');
+    const scrollAmount = slider.clientWidth; 
+    slider.scrollBy({
+      left: direction * scrollAmount,
+      behavior: 'smooth'
+    });
+  }
+</script>
+
 </head>
 
 <body>
 
-  <header class="site-header">
-    <div class="logo">
-      <a href="#"><img src="logo.png" alt="CYBERWAIS LOGO" class="logo-img"></a>
+  <header class="navbar">
+    <div class="navbar__logo">
+      <a href="#"><img src="logo.png" alt="LOGO" class="navbar__logo-img"></a>
     </div>
-    <div class="logoname">CYBERWAIS</div>
+    <div class="navbar__brand">CYBERWAIS</div>
     <nav>
-      <ul class="nav-links">
-        <li><a href="#home">HOME</a></li>
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#vision">WHAT'S NEW</a></li>
-        <li><a href="#mission">MISSION & VISION</a></li>
-        <li><a href="#more">●●●</a>
-     
-      
-       
-            
-
+      <ul class="navbar__list">
+        <li><a href="#home" class="navbar__link">HOME</a></li>
+        <li><a href="#about" class="navbar__link">ABOUT</a></li>
+        <li><a href="#documents" class="navbar__link">CAMPAIGN</a></li>
+        <li><a href="#mission" class="navbar__link">MISSION & VISION</a></li>
+        <li><a href="#contact" class="navbar__link">CONTACT US</a></li>
       </ul>
     </nav>
   </header>
 
-  <section id="home">
-    <div class="main-container">
-      <a href="#"><img src="logo.png" alt="CYBERWAIS LOGO" class="logo-img-container"></a>
-      <div class="rrr">PROJECT CYBERWAIS</div>
-      <button class="ss" onclick="document.getElementById('about').scrollIntoView();">EXPLORE</button>
-      <div style="margin-top: 20px;">
-        <a target="_blank" href="https://i.pinimg.com/736x/06/d6/7c/06d67c2573c628b81b915bddc1f55d91.jpg" style="color:#666; text-decoration:none; font-size:13px;">CONTACT
-          US</a>
+  <section id="home" class="section-wrapper">
+    <div class="card">
+      <img src="logo.png" alt="LOGO" class="card__logo">
+      <div class="card__title">PROJECT CYBERWAIS</div>
+      <button class="btn-primary" onclick="document.getElementById('about').scrollIntoView();">EXPLORE</button>
+      <br>
+    
+    </div>
+  </section>
+
+ <section id="about" class="section-wrapper">
+  <div class="card">
+    
+    <div class="about-text">
+      <div class="card__title">ABOUT</div>
+      <p>CYBERWAIS is a campaign for protection, awareness, and responsibility in the digital world.
+        <hr> This project promotes people to stay safe online.
+         We want everyone to learn how to protect their personal information and how to spot digital threats like scams or hackers.
+          Being safe online is not just about knowing the rules; it is about making safety a part of what you do every day. Our goal is to make cybersecurity easy for everyone to understand and use.
+          
+      </p>
+      
+      <hr>
+      
+      <h2>WHY CYBERWAIS?</h2>
+      <p>
+       The name is heavily inspired from popular E-sports game player named "Wise" who is often called as "Wais" and is known for his strategic gameplays.
+      </p>
+      
+      <button class="btn-primary" onclick="document.getElementById('team').scrollIntoView();">
+        MEET THE TEAM
+      </button>
+    </div>
+
+    <img src="bgimg.png" alt="Cybersecurity illustration" class="about-img">
+
+  </div>
+ </section>
+
+  <section id="team" class="section-wrapper">
+  <div class="card">
+    <div class="card__title">OUR TEAM</div>
+    
+    <div class="slider-wrapper">
+      <button class="slider-btn prev" onclick="moveSlider(-1)">&#10094;</button>
+      
+      <div class="slider-container" id="memberSlider">
+        <div class="member-card">
+          <img src="ocampo.png" alt="Ocampo Photo" class="member-photo">
+          <div class="member-name">Ocampo, Avril Keisha M.</div>
+          <div class="member-role">Project Manager / Documentalist</div>
+        </div>
+        
+        <div class="member-card">
+          <img src="kubo.png" alt="Kubo Photo" class="member-photo">
+          <div class="member-name">Kubo, Xena Calista</div>
+          <div class="member-role">Head of Social Media Committee / Documentalist</div>
+        </div>
+
+        <div class="member-card">
+          <img src="clyde.png" alt="Andray Photo" class="member-photo">
+          <div class="member-name">Diño, Andray Clyde</div>
+          <div class="member-role">Head of Multimedia Committee <b>/</b> Social Media Committee Member</div>
+        </div>
+
+        <div class="member-card">
+          <img src="trestiza.png" alt="Trestiza Photo" class="member-photo">
+          <div class="member-name">Trestiza, Fernando</div>
+          <div class="member-role">Head of Website Committee</div>
+        </div>
+
+        <div class="member-card">
+          <img src="gasque.png" alt="Gasque Photo" class="member-photo">
+          <div class="member-name">Gasque, Cyril</div>
+          <div class="member-role">Social Media Committee Member / Website Committee Member</div>
+        </div>
+
+        <div class="member-card">
+          <img src="almazar.png" alt="Almazar Photo" class="member-photo">
+          <div class="member-name">Almazar, Kenneth</div>
+          <div class="member-role">Multimedia Committee Member / Website Committee Member</div>
+        </div>
+
+        <div class="member-card">
+          <img src="azarcon.png " alt="Azarcon Photo" class="member-photo">
+          <div class="member-name">Azarcon, Julius</div>
+          <div class="member-role">Multimedia Committee Member</div>
+        </div>
+
+
+        <div class="member-card">
+          <img src="pilar.png" alt="Pilar Photo" class="member-photo">
+          <div class="member-name">Pilar, Rich Anthony Steven</div>
+          <div class="member-role">Website Committee Member</div>
+        </div>
+
+
+
+
+
+
+
+
+       
+        <button class="btn-primary" style="position: absolute; bottom: -40px; left: 50%; transform: translateX(-50%);" onclick="document.getElementById('documents').scrollIntoView();">CONTINUE</button>
+
+      </div>
+
+      <button class="slider-btn next" onclick="moveSlider(1)">&#10095;</button>
+      
+    </div>
+    
+  </div>
+</section>
+
+
+
+
+  <section id="documents" class="section-wrapper">
+  <div class="card">
+    <div class="card__title">TAKE A LOOK AT OUR CAMPAIGN!</div>
+    <p><I>DRAG THE IMAGE TO THE RIGHT / OPEN IMAGE IN NEW TAB TO VIEW IN FULLSCREEN!</I></p>
+
+    <div class="docs-grid">
+      <div class="doc-item">
+        <img src="Fbpage.png" alt="Facebook Page Screenshot">
+        <div class="doc-caption">Official Facebook Page</div>
+      </div>
+
+      <div class="doc-item">
+        
+        <img src="upload1.jpg" alt="Campaign Poster">
+        <div class="doc-caption">Poster/Infographic</div>
+      </div>
+
+      <div class="doc-item">
+        <img src="promotional1.png" alt="logo">
+        <div class="doc-caption">Promotion</div>
       </div>
     </div>
-  </section>
 
-  <section id="about">
-    <div class="main-container2">
-      <div class="rrr">ABOUT </div>
-      <p> CYBERWAIS IS A CAMPAIGN FOR PROTECTION, AWARENESS, AND RESPONSIBILITY IN THE DIGITAL WORLD. </p>
-      <button class="ss" onclick="document.getElementById('vision').scrollIntoView();">continue</button>
+    <div style="margin-top: 30px;">
+      <button class="btn-primary" onclick="document.getElementById('tips').scrollIntoView();">
+        CONTINUE TO TIPS FOR TODAY
+      </button>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="vision">
-    <div class="main-container3">
-      <div class="rrr">WHAT'S NEW</div>
-      <p>i see dead people</p>
-      <button class="ss" onclick="document.getElementById('mission').scrollIntoView();">continue</button>
+<section id="tips" class="section-wrapper">
+  <div class="card" style="max-width: 900px;">
+    <div class="card__title">CYBERWAIS TIPS FOR TODAY</div>
+    <p>Small habits lead to the essence of security. We can start with these today:</p>
+    
+    <div class="tips-container">
+      <div class="tip-card">
+        <h3>&#128274; Password Power</h3>
+        <p>Use long passwords with a mix of letters, numbers, and symbols. Avoid using "123456" or your birthday.</p>
+      </div>
+
+      <div class="tip-card">
+        <h3>&#128270; Link Check</h3>
+        <p>Before clicking a link in an email or message, hover over it to see where it actually leads. Don't trust suspicious senders.</p>
+      </div>
+
+      <div class="tip-card">
+        <h3>&#128242; App Permissions</h3>
+        <p>Check your phone settings. If a simple calculator app asks for your location or contacts, deny it.</p>
+      </div>
+
+      <div class="tip-card">
+        <h3>&#128187; Software Updates</h3>
+        <p>Always update your apps and phone system. These updates often fix "holes" that hackers use to get in.</p>
+      </div>
     </div>
-  </section>
+    <p style="opacity: 50%;">Stay tuned for more updates in the future!</p>
+  </div>
+  
+</section>
 
-  <section id="mission">
-    <div class="main-container4">
-      <div class="rrr">MISSION</div>
-      <p>ipalaganap ang kadiliman</p>
+ <section id="mission" class="section-wrapper">
+  <div class="card" style="max-width: 700px;"> <div class="card__title">OUR PURPOSE</div>
+    
+    <div class="mission-vision-container">
+      
+      <div class="mv-item">
+        <span class="mv-tag">Vision</span>
+        <p class="mv-content">
+          A world where we stop <b>cybersecurity</b> and start embodying the <b>essence of security</b>.
+        </p>
+      </div>
+
+      <div class="mv-item mission">
+        <span class="mv-tag">Mission</span>
+        <p class="mv-content">
+          To move beyond just being aware of cyber security & cyber threats and start <b>integrating it</b> into our daily life.
+        </p>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer style="padding: 20px; text-align: center; width: 100%;">
-    <span style="font-size: 12px; color: #333;">Made by CYBERWAIS LEh jet - fernando </span>
+<section id="contact" class="section-wrapper">
+  <div class="card" style="max-width: 500px; text-align: center;">
+    <div class="card__title">GET IN TOUCH</div>
+    <p>Have questions or want to collaborate? Reach out to us!</p>
+    <a href="https://www.facebook.com/profile.php?id=61588260039523" style="text-decoration: none;" class="btn-primary" target="_blank">OUR OFFICIAL FACEBOOK PAGE</a>
+    <p style="margin-top: 20px; font-size: 14px; color: #666;">Or email us at <h5>axcyber.wais.28@gmail.com </h2></p>
+  <div style="margin-top: 40px;">
+      <button class="btn-primary" onclick="document.getElementById('home').scrollIntoView();">
+        BACK TO TOP
+      </button>
+    </div>
+  </div>
+</section>
+
+
+
+  <footer style="padding: 40px; text-align: center; width: 100%;">
+
+    <a href="https://github.com/RedAntCommander/RedAntCommander.github.io" target="_blank" style="text-decoration: underline;">View the full code at github</a>
+    
+    <hr>
+    <span style="font-size: 12px; color: #333;">Made by CYBERWAIS - Head of the Website Committee</span>
+    
+    
   </footer>
 
 </body>
-
-
-
 </html>
-
-<a href="https://github.com/RedAntCommander/RedAntCommander.github.io">Hawak ko ang beat Hawak ko ang gabi</a>
