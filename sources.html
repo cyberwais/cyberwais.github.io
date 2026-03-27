@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CYBERWAIS - Sources & Assets</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #333383 0%, #b9b9e9 100%);
+      background-attachment: fixed;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+   
+    header {
+      width: 100%;
+      padding: 40px 20px;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      color: white;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    }
+
+    h1 { margin: 0; font-size: 2.5rem; letter-spacing: 2px; }
+    p.subtitle { opacity: 0.9; margin-top: 10px; }
+
+    
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 40px 0;
+      
+    }
+
+    .container :hover {
+      transform: translateY(-3px);
+      transition: all 0.3s ease;
+    }
+
+    
+    .asset-item {
+      background: white;
+      margin-bottom: 50px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+      border: 1px solid #000;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+   
+
+    .asset-info {
+      padding: 25px 30px;
+      border-bottom: 1px solid #eee;
+      background: #fdfdfd;
+      transition: all 0.3s ease;
+    }
+
+    .asset-info h2 {
+      margin: 0;
+      color: #333383;
+      font-size: 1.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .asset-info p {
+      margin: 10px 0 0;
+      color: #666;
+      line-height: 1.6;
+      transition: all 0.3s ease ;
+    }
+
+    
+    .image-viewer {
+      width: 100%;
+      background: #eee; 
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .image-viewer img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      display: block;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 40px;
+      padding: 15px 30px;
+      background: white;
+      color: #333383;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .back-btn:hover {
+      transform: translateY(-3px);
+      background: #d6eefc;
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 1.8rem; }
+      .asset-info { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>WEBSITE DOCUMENTATION</h1>
+    <p class="subtitle">Web Contents & Screenshots used for CyberWais</p>
+  </header>
+
+  <div class="container">
+    
+    <div class="asset-item">
+      <div class="asset-info">
+        <h2>1. Official logo and other promotional materials</h2>
+        
+      </div>
+      <div class="image-viewer">
+        <img src="sscanva.png" alt="Logo Design Process">
+        
+      </div>
+      <p style="padding: 20px;">
+        This screenshot shows the where the CyberWais logo And some promotional content was designed, it is made from canva from templates in the community.
+      </p>
+    </div>
+
+    <div class="asset-item">
+      <div class="asset-info">
+        <h2>2. Information Source (Tips & Research)</h2>
+      </div>
+      <div class="image-viewer">
+        <img src="sstips.png" alt="Research Source">
+      </div>
+      <p style="padding: 20px">Reference used for the 'CyberWais Tips' section.  </p>
+      <a style="padding: 20px; bottom:  ;" href="https://security.berkeley.edu/resources/best-practices-how-to-articles/top-10-secure-computing-tips" target="_blank" rel="noopener noreferrer">https://security.berkeley.edu/resources/best-practices-how-to-articles/top-10-secure-computing-tips</a>
+      <hr>
+    </div>
+
+    <div class="asset-item">
+      <div class="asset-info">
+        <h2>3. Profile scroller and Buttons</h2>
+        <p>We used javascript to create the profile scroller and buttons functionality such as "continue" and navigation buttons in the header. Code is referenced from medium.com and rewritten with Microsoft Copilot from Visual Code Studio and Gemini.</p>
+        <a href="https://medium.com/swlh/create-a-simple-horizontal-scroller-with-javascript-1c9e5b8a7f0" target="_blank" rel="noopener noreferrer">https://medium.com/swlh/create-a-simple-horizontal-scroller-with-javascript-1c9e5b8a7f0</a>
+      </div>
+      <div class="image-viewer">
+        <img src="sscode.png" alt="Coding Reference">
+      </div>
+    </div>
+
+    <div style="text-align: center;">
+      <a href="index.html" class="back-btn">← BACK TO HOME</a>
+    </div>
+
+  </div>
+
+  <footer style="color: white; padding-bottom: 40px; opacity: 0.7; font-size: 12px;">
+    CYBERWAIS PROJECT - DOCUMENTATION PAGE - HEAD OF THE WEBSITE COMMITTEE
+  </footer>
+
+</body>
+</html>
