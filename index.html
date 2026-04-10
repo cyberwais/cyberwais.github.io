@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PROJECT CYBERWAIS</title>
-  
+
   <style>
     * {
       box-sizing: border-box;
@@ -21,10 +22,10 @@
       align-items: center;
       min-height: 100vh;
       font-family: Arial, sans-serif;
-      background-image: 
-        linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px), 
-        linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px), 
-        linear-gradient(135deg, #333383 0%, #b9b9e9 100%); 
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+        linear-gradient(135deg, #333383 0%, #b9b9e9 100%);
       background-size: 30px 30px, 30px 30px, 100% 100%;
       overflow-x: hidden;
     }
@@ -53,7 +54,7 @@
     }
 
     .navbar__brand {
-      font-size: clamp(16px, 4vw, 24px); 
+      font-size: clamp(16px, 4vw, 24px);
       font-weight: 900;
       color: #333;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -67,7 +68,8 @@
       gap: 10px;
       margin: 0;
       padding: 0;
-      flex-wrap: wrap; /* Allows wrapping on smaller screens */
+      flex-wrap: wrap;
+      /* Allows wrapping on smaller screens */
       justify-content: center;
     }
 
@@ -89,14 +91,15 @@
       color: white;
       transform: translateY(-3px);
     }
-    
+
     .navbar__link:active {
       transform: translateY(0px);
     }
 
     /* --- LAYOUT & CARDS --- */
     .section-wrapper {
-      padding: 120px 20px 80px 20px; /* Added top padding to account for navbar */
+      padding: 120px 20px 80px 20px;
+      /* Added top padding to account for navbar */
       display: flex;
       justify-content: center;
       width: 100%;
@@ -113,7 +116,7 @@
       max-width: 400px;
       transition: all 0.3s ease;
     }
-    
+
     .card:hover {
       box-shadow: 20px 25px 35px rgba(0, 0, 0, 0.3);
       transform: translateY(-5px);
@@ -149,12 +152,12 @@
     /* --- ABOUT SECTION --- */
     #about .card {
       display: flex;
-      flex-direction: row-reverse; 
+      flex-direction: row-reverse;
       align-items: center;
       justify-content: center;
       gap: 40px;
       text-align: left;
-      max-width: 900px; 
+      max-width: 900px;
       padding: 40px;
     }
 
@@ -177,19 +180,19 @@
     }
 
     .about-img {
-      width: 300px; 
+      width: 300px;
       max-width: 100%;
       height: auto;
       border-radius: 20px;
-      box-shadow: 10px 10px 20px rgba(0,0,0,0.1);
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
       transition: transform 0.5s ease;
     }
 
     #about .card:hover .about-img {
-      transform: rotate(3deg) scale(1.05); 
+      transform: rotate(3deg) scale(1.05);
     }
 
-    
+
     .btn-primary {
       background-color: white;
       border: 1px solid rgb(103, 103, 236);
@@ -220,13 +223,13 @@
       box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
     }
 
-    
+
     .slider-wrapper {
       position: relative;
       display: flex;
       align-items: center;
       width: 100%;
-      padding-bottom: 20px; 
+      padding-bottom: 20px;
     }
 
     .slider-container {
@@ -236,8 +239,8 @@
       scroll-snap-type: x mandatory;
       gap: 20px;
       padding: 10px 0;
-      -ms-overflow-style: none; 
-      scrollbar-width: none; 
+      -ms-overflow-style: none;
+      scrollbar-width: none;
     }
 
     .slider-container::-webkit-scrollbar {
@@ -245,7 +248,7 @@
     }
 
     .member-card {
-      min-width: 100%; 
+      min-width: 100%;
       scroll-snap-align: center;
       text-align: center;
     }
@@ -288,7 +291,7 @@
       color: white;
     }
 
-    
+
     #documents .card {
       max-width: 900px;
     }
@@ -312,9 +315,9 @@
 
     .doc-item img {
       width: 100%;
-      height: 210px; 
-      object-fit: contain; 
-      background-color: #f0f0f0; 
+      height: 210px;
+      object-fit: contain;
+      background-color: #f0f0f0;
       display: block;
     }
 
@@ -328,10 +331,10 @@
 
     .doc-item:hover {
       transform: scale(1.03);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     }
 
-    
+
     .tips-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -366,7 +369,7 @@
       margin-bottom: 0;
     }
 
-   
+
     .mission-vision-container {
       display: flex;
       flex-direction: column;
@@ -378,8 +381,8 @@
 
     .mv-item {
       padding: 20px;
-      border-left: 5px solid #333383; 
-      background: rgba(214, 238, 252, 0.3); 
+      border-left: 5px solid #333383;
+      background: rgba(214, 238, 252, 0.3);
       border-radius: 0 15px 15px 0;
       transition: transform 0.3s ease;
     }
@@ -410,21 +413,46 @@
       border-left-color: #b9b9e9;
     }
 
-    
+
+    .tips-page {
+      min-width: 100%;
+      scroll-snap-align: center;
+    }
+
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      text-align: left;
+      padding: 10px;
+    }
+
+
+    #tipsSlider {
+      display: flex;
+      overflow-x: hidden;
+      scroll-snap-type: x mandatory;
+      width: 100%;
+    }
+
+
     @media (max-width: 850px) {
       .navbar {
         flex-direction: column;
         padding: 15px;
         border-radius: 25px;
       }
+
       .navbar__brand {
         margin-left: 0;
         margin-bottom: 10px;
         text-align: center;
       }
+
       .navbar__list {
         gap: 8px;
       }
+
       .navbar__link {
         font-size: 12px;
         padding: 6px 12px;
@@ -435,7 +463,7 @@
       .section-wrapper {
         padding: 140px 15px 60px 15px;
       }
-      
+
       .card {
         padding: 30px 20px;
       }
@@ -445,7 +473,7 @@
         text-align: center;
         padding: 30px;
       }
-      
+
       .about-img {
         width: 200px;
       }
@@ -457,9 +485,18 @@
   </style>
 
   <script>
+    function moveTipsSlider(direction) {
+      const slider = document.getElementById('tipsSlider');
+      const scrollAmount = slider.clientWidth;
+      slider.scrollBy({
+        left: direction * scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+
     function moveSlider(direction) {
       const slider = document.getElementById('memberSlider');
-      const scrollAmount = slider.clientWidth; 
+      const scrollAmount = 300;
       slider.scrollBy({
         left: direction * scrollAmount,
         behavior: 'smooth'
@@ -495,187 +532,271 @@
     </div>
   </section>
 
- <section id="about" class="section-wrapper">
-  <div class="card">
-    <div class="about-text">
-      <div class="card__title">ABOUT</div>
-      <p>CYBERWAIS is a campaign for protection, awareness, and responsibility in the digital world.</p>
-      <hr>
-      <p>This project promotes people to stay safe online. We want everyone to learn how to protect their personal information and how to spot digital threats like scams or hackers. Being safe online is not just about knowing the rules; it is about making safety a part of what you do every day. Our goal is to make cybersecurity easy for everyone to understand and use.</p>
-      <hr>
-      <h2>WHY CYBERWAIS?</h2>
-      <p>The name is heavily inspired from popular E-sports game player named "Wise" who is often called as "Wais" and is known for his strategic gameplays.</p>
-      <button class="btn-primary" onclick="document.getElementById('team').scrollIntoView();">MEET THE TEAM</button>
+  <section id="about" class="section-wrapper">
+    <div class="card">
+      <div class="about-text">
+        <div class="card__title">ABOUT</div>
+        <p>CYBERWAIS is a campaign for protection, awareness, and responsibility in the digital world.</p>
+        <hr>
+        <p>This project promotes people to stay safe online. We want everyone to learn how to protect their personal
+          information and how to spot digital threats like scams or hackers. Being safe online is not just about knowing
+          the rules; it is about making safety a part of what you do every day. Our goal is to make cybersecurity easy
+          for everyone to understand and use.</p>
+        <hr>
+        <h2>WHY CYBERWAIS?</h2>
+        <p>The name is heavily inspired from popular E-sports game player named "Wise" who is often called as "Wais" and
+          is known for his strategic gameplays.</p>
+        <button class="btn-primary" onclick="document.getElementById('team').scrollIntoView();">MEET THE TEAM</button>
+      </div>
+      <img src="bgimg.png" alt="Cybersecurity illustration" class="about-img">
     </div>
-    <img src="bgimg.png" alt="Cybersecurity illustration" class="about-img">
-  </div>
- </section>
+  </section>
 
   <section id="team" class="section-wrapper">
-  <div class="card">
-    <div class="card__title">OUR TEAM</div>
-    <div class="slider-wrapper">
-      <button class="slider-btn prev" onclick="moveSlider(-1)">&#10094;</button>
-      <div class="slider-container" id="memberSlider">
-        <div class="member-card">
-          <img src="ocampo.png" alt="Ocampo Photo" class="member-photo">
-          <div class="member-name">Ocampo, Avril Keisha M.</div>
-          <div class="member-role">Project Manager / Documentalist</div>
+    <div class="card">
+      <div class="card__title">OUR TEAM</div>
+      <div class="slider-wrapper">
+        <button class="slider-btn prev" onclick="moveSlider(-1)">&#10094;</button>
+        <div class="slider-container" id="memberSlider">
+          <div class="member-card">
+            <img src="ocampo.png" alt="Ocampo Photo" class="member-photo">
+            <div class="member-name">Ocampo, Avril Keisha M.</div>
+            <div class="member-role">Project Manager / Documentalist</div>
+          </div>
+          <div class="member-card">
+            <img src="kubo.png" alt="Kubo Photo" class="member-photo">
+            <div class="member-name">Kubo, Xena Calista</div>
+            <div class="member-role">Head of Social Media Committee / Documentalist</div>
+          </div>
+          <div class="member-card">
+            <img src="clyde.png" alt="Andray Photo" class="member-photo">
+            <div class="member-name">Diño, Andray Clyde</div>
+            <div class="member-role">Head of Multimedia Committee <b>/</b> Social Media Committee Member</div>
+          </div>
+          <div class="member-card">
+            <img src="trestiza.png" alt="Trestiza Photo" class="member-photo">
+            <div class="member-name">Trestiza, Fernando</div>
+            <div class="member-role">Head of Website Committee</div>
+          </div>
+          <div class="member-card">
+            <img src="gasque.png" alt="Gasque Photo" class="member-photo">
+            <div class="member-name">Gasque, Cyril</div>
+            <div class="member-role">Social Media Committee Member / Website Committee Member</div>
+          </div>
+          <div class="member-card">
+            <img src="almazar.png" alt="Almazar Photo" class="member-photo">
+            <div class="member-name">Almazar, Kenneth</div>
+            <div class="member-role">Multimedia Committee Member / Website Committee Member</div>
+          </div>
+          <div class="member-card">
+            <img src="azarcon.png" alt="Azarcon Photo" class="member-photo">
+            <div class="member-name">Azarcon, Julius</div>
+            <div class="member-role">Multimedia Committee Member</div>
+          </div>
+          <div class="member-card">
+            <img src="pilar.png" alt="Pilar Photo" class="member-photo">
+            <div class="member-name">Pilar, Rich Anthony Steven</div>
+            <div class="member-role">Website Committee Member</div>
+          </div>
         </div>
-        <div class="member-card">
-          <img src="kubo.png" alt="Kubo Photo" class="member-photo">
-          <div class="member-name">Kubo, Xena Calista</div>
-          <div class="member-role">Head of Social Media Committee / Documentalist</div>
-        </div>
-        <div class="member-card">
-          <img src="clyde.png" alt="Andray Photo" class="member-photo">
-          <div class="member-name">Diño, Andray Clyde</div>
-          <div class="member-role">Head of Multimedia Committee <b>/</b> Social Media Committee Member</div>
-        </div>
-        <div class="member-card">
-          <img src="trestiza.png" alt="Trestiza Photo" class="member-photo">
-          <div class="member-name">Trestiza, Fernando</div>
-          <div class="member-role">Head of Website Committee</div>
-        </div>
-        <div class="member-card">
-          <img src="gasque.png" alt="Gasque Photo" class="member-photo">
-          <div class="member-name">Gasque, Cyril</div>
-          <div class="member-role">Social Media Committee Member / Website Committee Member</div>
-        </div>
-        <div class="member-card">
-          <img src="almazar.png" alt="Almazar Photo" class="member-photo">
-          <div class="member-name">Almazar, Kenneth</div>
-          <div class="member-role">Multimedia Committee Member / Website Committee Member</div>
-        </div>
-        <div class="member-card">
-          <img src="azarcon.png" alt="Azarcon Photo" class="member-photo">
-          <div class="member-name">Azarcon, Julius</div>
-          <div class="member-role">Multimedia Committee Member</div>
-        </div>
-        <div class="member-card">
-          <img src="pilar.png" alt="Pilar Photo" class="member-photo">
-          <div class="member-name">Pilar, Rich Anthony Steven</div>
-          <div class="member-role">Website Committee Member</div>
-        </div>
+        <button class="slider-btn next" onclick="moveSlider(1)">&#10095;</button>
       </div>
-      <button class="slider-btn next" onclick="moveSlider(1)">&#10095;</button>
+      <button class="btn-primary" style="margin-top: 15px;"
+        onclick="document.getElementById('documents').scrollIntoView();">CONTINUE</button>
     </div>
-    <button class="btn-primary" style="margin-top: 15px;" onclick="document.getElementById('documents').scrollIntoView();">CONTINUE</button>
-  </div>
-</section>
+  </section>
 
   <section id="documents" class="section-wrapper">
-  <div class="card">
-    <div class="card__title">TAKE A LOOK AT OUR CAMPAIGN!</div>
-    <p><I>DRAG THE IMAGE TO THE RIGHT / OPEN IMAGE IN NEW TAB TO VIEW IN FULLSCREEN!</I></p>
-    <div class="docs-grid">
-      <div class="doc-item">
-        <img src="Fbpage.png" alt="Facebook Page Screenshot">
-        <div class="doc-caption">Official Facebook Page</div>
+    <div class="card">
+      <div class="card__title">TAKE A QUICK LOOK AT OUR CAMPAIGN!</div>
+      <p><I>DRAG THE IMAGE TO THE RIGHT(To split view) / OPEN IMAGE IN NEW TAB TO VIEW IN FULLSCREEN!</I></p>
+      <div class="docs-grid">
+        <div class="doc-item">
+          <a></a>
+          <img src="Fbpage.png" alt="Facebook Page Screenshot">
+          <div class="doc-caption">Official Facebook Page</div>
+        </div>
+        <div class="doc-item">
+          <img src="upload1.jpg" alt="Campaign Poster">
+          <div class="doc-caption">Poster/Infographic</div>
+        </div>
+        <div class="doc-item">
+          <img src="promotional1.png" alt="logo">
+          <div class="doc-caption">Campaign promotion</div>
+        </div>
+        <div class="doc-item">
+          <a style="text-decoration: none;" href="https://www.facebook.com/share/r/1BWpiHoLM3/" target="_blank">
+          <img src="promotional2.jpg" alt="campaign Poster">
+          <div class="doc-caption">Video Promotion (click to view)</div>
+          <p style="font-size: x-small;"> April 8, 2026</p>
+          </a>
+        </div>
+        <div class="doc-item">
+         <P style="margin-top: 100px;">STAY TUNED FOR MORE UPDATES!</P> 
+        
+        </div>
+        
       </div>
-      <div class="doc-item">
-        <img src="upload1.jpg" alt="Campaign Poster">
-        <div class="doc-caption">Poster/Infographic</div>
-      </div>
-      <div class="doc-item">
-        <img src="promotional1.png" alt="logo">
-        <div class="doc-caption">Promotion</div>
+      <div style="margin-top: 30px;">
+        <button class="btn-primary" onclick="document.getElementById('tips').scrollIntoView();">
+          CONTINUE
+        </button>
       </div>
     </div>
-    <div style="margin-top: 30px;">
-      <button class="btn-primary" onclick="document.getElementById('tips').scrollIntoView();">
+  </section>
+
+  <section id="tips" class="section-wrapper">
+    <div class="card" style="max-width: 960px;">
+      <div class="card__title">CYBERWAIS TIPS BULLETIN</div>
+      <p></p>
+      <p>Small habits lead to the essence of security. We can start with these today:</p>
+
+      <div class="slider-wrapper">
+        <button class="slider-btn prev" onclick="moveTipsSlider(-1)">&#10094;</button>
+
+        <div class="slider-container" id="tipsSlider">
+
+          <div class="tips-page">
+            <div class="tips-grid">
+              <div class="tip-card">
+                <h3>&#128274; Password Power</h3>
+                <p>Use long passwords with a mix of letters, numbers, and symbols. Avoid using "123456" or your
+                  birthday.</p>
+              </div>
+              <div class="tip-card">
+                <h3>&#128270; Link Check</h3>
+                <p>Before clicking a link in an email or message, hover over it to see where it actually leads.</p>
+              </div>
+              <div class="tip-card">
+                <h3>&#128242; App Permissions</h3>
+                <p>Check your phone permission settings. If a simple app like calculator asks for sensitive permissions such as location, deny it.</p>
+              </div>
+              <div class="tip-card">
+                <h3>&#128187; Software Updates</h3>
+                <p>Always update your apps. These updates often fix "holes" that hackers use to get in.</p>
+              </div>
+           
+              <div class="tip-card" >
+                <h3>&#128246; Public Wi-Fi</h3>
+                <p>Avoid logging into bank accounts or sensitive sites while on public mall or coffee shop Wi-Fi.</p>
+              </div>
+              <div class="tip-card" >
+                <h3>&#128221; Two-Factor Authentication (2FA)</h3>
+                <p>Turn on 2FA for your Facebook and Gmail. It's the best way to stop hackers even if they have your
+                  password.</p>
+              </div>
+              <div class="tip-card" >
+                <h3>&#128181; Digital Payments</h3>
+                <p>Never share your OTP (One-Time Password) with anyone, even if they claim to be from GCash or your
+                  bank.</p>
+              </div>
+              <div class="tip-card"
+                style="display: flex; justify-content: center; align-items: center; background: rgba(0,0,0,0.05);">
+                <img style="height: 100px; border-radius: 10px;"
+                  src="https://i.pinimg.com/736x/06/d6/7c/06d67c2573c628b81b915bddc1f55d91.jpg" alt="Warning">
+              </div>
+              <div class="tip-card">
+                <h3 style="text-align: center; color: #b9b9e9;">This might be you if you still haven't consider these tips 👀</h3>
+                <p> <---------------------------------------</p>
+
+
+              </div>
+            </div>
+            
+          </div>
+            <div class="tips-page">
+              <div class="tips-grid">
+                <div class="tip-card">
+                  <h3>&#128274; Guard It!</h3>
+                  <p>Ensure your system's built-in antivirus is active and use reliable security software to scan for and block malware.</p>
+                </div>
+            
+                <div class="tip-card">
+                  <h3>🛜 Local WiFi Protection</h3>
+                  <p>Change your default router passwords.ot changing default passwords can leave your network vulnerable to unauthorized access.</p>
+                </div>
+
+                <div class="tip-card">
+                  <h3>&#128187; Identity Verification</h3>
+                  <p>If a colleague or service provider asks for sensitive data unexpectedly, verify the request through a secondary, trusted channel.</p>
+                </div>
+                <div class="tip-card">
+                  <h3>&#128187; Backup Your Data</h3>
+                  <p>Regularly back up important files to an external drive or cloud service. This can save you from data loss due to ransomware or hardware failure.</p>
+              </div>
+              <div class="tip-card">
+                  <h3> STAY TUNED FOR OUR TIPS IN THE FUTURE!</h3>
+                  <p>You might need these!</p>
+              </div>
+
+              </div>
+            </div>
+        </div>
+
+        <button class="slider-btn next" onclick="moveTipsSlider(1)">&#10095;</button>
+      </div>
+
+      <div style="margin-top: 20px; text-align: center;">
+        <button class="btn-primary" onclick="document.getElementById('mission').scrollIntoView();">CONTINUE</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="mission" class="section-wrapper">
+    <div class="card" style="max-width: 700px;">
+      <div class="card__title">OUR PURPOSE</div>
+      <div class="mission-vision-container">
+        <div class="mv-item">
+          <span class="mv-tag">Vision</span>
+          <p class="mv-content">
+            A world where we stop with just <b>cybersecurity</b> and start embodying the <b>essence of security</b>.
+          </p>
+        </div>
+        <div class="mv-item mission">
+          <span class="mv-tag">Mission</span>
+          <p class="mv-content">
+            To move beyond just being aware of cybersecurity & cyber threats and start <b>including it</b> into our
+            daily life.
+          </p>
+        </div>
+      </div>
+      <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView();">
         CONTINUE
       </button>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="tips" class="section-wrapper">
-  <div class="card" style="max-width: 900px;">
-    <div class="card__title">CYBERWAIS TIPS FOR TODAY</div>
-    <p>Small habits lead to the essence of security. We can start with these today:</p>
-    <div class="tips-container">
-      <div class="tip-card">
-        <h3>&#128274; Password Power</h3>
-        <p>Use long passwords with a mix of letters, numbers, and symbols. Avoid using "123456" or your birthday.</p>
-      </div>
-      <div class="tip-card">
-        <h3>&#128270; Link Check</h3>
-        <p>Before clicking a link in an email or message, hover over it to see where it actually leads. Don't trust suspicious senders.</p>
-      </div>
-      <div class="tip-card">
-        <h3>&#128242; App Permissions</h3>
-        <p>Check your phone settings. If a simple calculator app asks for your location or contacts, deny it.</p>
-      </div>
-      <div class="tip-card">
-        <h3>&#128187; Software Updates</h3>
-        <p>Always update your apps and phone system. These updates often fix "holes" that hackers use to get in.</p>
-      </div>
-      <div class="tip-card" style="display: flex; justify-content: center; align-items: center; background: rgba(0,0,0,0.05);">
-      <img style="height: 130px; border-radius: 10px; object-fit: cover;" 
-           src="https://i.pinimg.com/736x/06/d6/7c/06d67c2573c628b81b915bddc1f55d91.jpg" 
-           alt="Warning Illustration">
-    </div>
-  </div>
-
-  <div style="margin-top: 30px; text-align: center;">
-    <p style="opacity: 0.6; font-style: italic; margin-bottom: 5px;">
-      That might be you if you still haven't considered these tips 👽
-    </p>
-    <p style="opacity: 0.4; font-size: 14px;">
-      Stay tuned for more updates in the future!
-    </p>
-  </div>
-</section>
-
- <section id="mission" class="section-wrapper">
-  <div class="card" style="max-width: 700px;"> 
-    <div class="card__title">OUR PURPOSE</div>
-    <div class="mission-vision-container">
-      <div class="mv-item">
-        <span class="mv-tag">Vision</span>
-        <p class="mv-content">
-          A world where we stop with just <b>cybersecurity</b> and start embodying the <b>essence of security</b>.
-        </p>
-      </div>
-      <div class="mv-item mission">
-        <span class="mv-tag">Mission</span>
-        <p class="mv-content">
-          To move beyond just being aware of cybersecurity & cyber threats and start <b>including it</b> into our daily life.
-        </p>
+  <section id="contact" class="section-wrapper">
+    <div class="card" style="max-width: 500px; text-align: center;">
+      <div class="card__title">GET IN TOUCH</div>
+      <p>Have questions or want to collaborate? Reach out to us!</p>
+      <a href="https://www.facebook.com/profile.php?id=61588260039523" class="btn-primary" target="_blank">OUR OFFICIAL
+        FACEBOOK PAGE</a>
+      <p style="margin-top: 20px; font-size: 14px; color: #666;">Or email us at
+      <h5>axcyber.wais.28@gmail.com</h5>
+      </p>
+      <hr>
+      <div style="margin-top: 40px;">
+        <button class="btn-primary" onclick="document.getElementById('home').scrollIntoView();">
+          BACK TO TOP
+        </button>
+        <p>or</p>
+        <button class="btn-primary" onclick="window.open('sources.html',);">
+          VIEW OUR WEBSITE DOCUMENTATION
+        </button>
       </div>
     </div>
-    <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView();">
-    CONTINUE
-    </button>
-  </div>
-</section>
-
-<section id="contact" class="section-wrapper">
-  <div class="card" style="max-width: 500px; text-align: center;">
-    <div class="card__title">GET IN TOUCH</div>
-    <p>Have questions? want to collaborate? or just want to check out our page? Reach out to us!</p>
-    <a href="https://www.facebook.com/profile.php?id=61588260039523" class="btn-primary" target="_blank">OUR OFFICIAL FACEBOOK PAGE</a>
-    <p style="margin-top: 20px; font-size: 14px; color: #666;">Or email us at <h5>axcyber.wais.28@gmail.com</h5></p>
-    <div style="margin-top: 40px;">
-      <button class="btn-primary" onclick="document.getElementById('home').scrollIntoView();">
-        BACK TO TOP
-      </button>
-      <p>or</p>
-      <button class="btn-primary" onclick="window.open('sources.html',);">
-        VIEW OUR WEBSITE DOCUMENTATION
-      </button>
-    </div>
-  </div>
-</section>
+  </section>
 
   <footer style="padding: 40px; text-align: center; width: 100%;">
-    <a href="https://github.com/cyberwais/cyberwais.github.io" target="_blank" style="text-decoration: underline;">View the full code at github</a>
+    <a href="https://github.com/cyberwais/cyberwais.github.io" target="_blank" style="text-decoration: underline;">View
+      the full code at github</a>
     <hr style="max-width: 300px; margin: 20px auto;">
-    <span style="font-size: 12px; color: #333;">-The Head of the Website Committee - Project CyberWais</span>
+    <a><span href="https://i.pinimg.com/736x/06/d6/7c/06d67c2573c628b81b915bddc1f55d91.jpg"
+        style="font-size: 12px; color: #333;">-The Head of the Website Committee - Project CyberWais</span></a>
   </footer>
 
-  
+
 
 </body>
 
